@@ -2,6 +2,9 @@ import { elementos } from "./dom.js";
 import { calculaParticipacao } from "./calculator.js";
 import { mostrarFeedback } from "./formFeedback.js";
 import { esconderFeedback } from "./formFeedback.js";
+import { configurarTrocaDeCores } from "./colorSection.js";
+
+configurarTrocaDeCores();
 
 function aplicaValores(){
 

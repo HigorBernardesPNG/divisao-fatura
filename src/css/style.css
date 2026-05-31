@@ -525,7 +525,7 @@ body {
 }
 
 .result-card__watermark {
-  color: var(--color-invoice);
+  color: var(--color-muted);
   position: absolute;
   right: 1.2rem;
   bottom: 1rem;

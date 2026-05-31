@@ -10,6 +10,9 @@ export const elementos = {
     infoPrimeiraPersonaNome: document.querySelector('infoPrimeiraPersonaNome'),
     infoSegundoPersonaNome: document.querySelector('infoSegundoPersonaNome'),
 
+    colorPessoaUm: document.getElementById("colorPessoaUm"),
+    colorPessoaDois: document.getElementById("colorPessoaDois"),
+
     valorFatura: document.getElementById("valorFatura"),
 
     pagarPessoaUm: document.getElementById("pagarPessoaUm"),
