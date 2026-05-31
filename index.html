@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/svg+xml" href="./src/icon/icon.svg">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  >
+
+  <link rel="stylesheet" href="./src/css/style.css">
+
+  <title>Divisão de Fatura</title>
+</head>
+
+<body class="page">
+
+  <main class="app">
+
+    <header class="app-header">
+      <div class="app-header__icon">
+        <i class="fa-solid fa-wallet"></i>
+      </div>
+
+      <div>
+        <h1 class="app-header__title">Divisão de Fatura</h1>
+        <p class="app-header__subtitle">
+          Divida sua fatura proporcionalmente à renda de cada pessoa.
+        </p>
+      </div>
+    </header>
+
+    <section class="bill-splitter">
+
+      <!-- PAINEL DE ENTRADA -->
+      <section class="bill-splitter__panel bill-splitter__panel--form">
+
+        <div class="section-header">
+          <div class="section-header__badge section-header__badge--primary">1</div>
+
+          <div>
+            <h2 class="section-header__title">Dados de entrada</h2>
+            <p class="section-header__subtitle">
+              Informe os salários e o valor da fatura
+            </p>
+          </div>
+        </div>
+
+        <!-- Pessoa 1 -->
+        <article class="person-card person-card--primary">
+          <div class="person-card__header">
+            <div class="person-card__icon person-card__icon--primary">
+              <i class="fa-solid fa-user"></i>
+            </div>
+
+            <h3
+              class="person-card__name person-card__name--primary"
+              id="innerPrimeiraPersonaNome"
+            >
+              Pessoa 1
+            </h3>
+
+            <!-- <button class="person-card__menu" type="button" aria-label="Opções">
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </button> -->
+          </div>
+
+          <div class="person-card__fields">
+            <div class="form-field">
+              <label class="form-field__label" for="primeiraPersonaNome">Nome</label>
+              <input
+                class="form-field__input"
+                id="primeiraPersonaNome"
+                type="text"
+                value="Higor"
+              >
+            </div>
+
+            <div class="form-field">
+              <label class="form-field__label" for="primeiraPersonaSalario">
+                Salário mensal
+              </label>
+              <input
+                class="form-field__input"
+                id="primeiraPersonaSalario"
+                type="number"
+                value="0"
+              >
+            </div>
+          </div>
+        </article>
+
+        <!-- Pessoa 2 -->
+        <article class="person-card person-card--secondary">
+          <div class="person-card__header">
+            <div class="person-card__icon person-card__icon--secondary">
+              <i class="fa-solid fa-user"></i>
+            </div>
+
+            <h3
+              class="person-card__name person-card__name--secondary"
+              id="innerSegundaPersonaNome"
+            >
+              Pessoa 2
+            </h3>
+
+            <!-- <button class="person-card__menu" type="button" aria-label="Opções">
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </button> -->
+          </div>
+
+          <div class="person-card__fields">
+            <div class="form-field">
+              <label class="form-field__label" for="segundaPersonaNome">Nome</label>
+              <input
+                class="form-field__input"
+                id="segundaPersonaNome"
+                type="text"
+                value="Jordana"
+              >
+            </div>
+
+            <div class="form-field">
+              <label class="form-field__label" for="segundaPersonaSalario">
+                Salário mensal
+              </label>
+              <input
+                class="form-field__input"
+                id="segundaPersonaSalario"
+                type="number"
+                value="0"
+              >
+            </div>
+          </div>
+        </article>
+
+        <!-- Fatura -->
+        <article class="invoice-card">
+          <div class="invoice-card__header">
+            <div class="invoice-card__icon">
+              <i class="fa-solid fa-file-invoice-dollar"></i>
+            </div>
+
+            <h3 class="invoice-card__title">Fatura</h3>
+          </div>
+
+          <div class="form-field">
+            <label class="form-field__label" for="valorFatura">
+              Valor da fatura
+            </label>
+            <input
+              class="form-field__input"
+              id="valorFatura"
+              type="number"
+              value="0"
+            >
+          </div>
+        </article>
+
+        <div class="form-actions">
+          <button class="button button--primary" id="botaoCalcular" type="button">
+            <i class="fa-solid fa-calculator"></i>
+            Calcular divisão
+          </button>
+
+          <button class="button button--secondary" id="botaoLimpar" type="button">
+            <i class="fa-solid fa-rotate-right"></i>
+            Limpar dados
+          </button>
+        </div>
+
+      </section>
+
+      <!-- PAINEL DE RESULTADO -->
+      <section class="bill-splitter__panel bill-splitter__panel--result">
+
+        <div class="section-header">
+          <div class="section-header__badge section-header__badge--secondary">2</div>
+
+          <div>
+            <h2 class="section-header__title">Resultado da divisão</h2>
+            <p class="section-header__subtitle">
+              Proporcional à participação na renda
+            </p>
+          </div>
+        </div>
+
+        <div class="result-list">
+
+          <!-- Resultado pessoa 1 -->
+          <article class="result-card result-card--primary">
+            <div class="result-card__top">
+              <div class="result-card__person">
+                <div class="result-card__icon result-card__icon--primary">
+                  <i class="fa-solid fa-user"></i>
+                </div>
+
+                <h3
+                  class="result-card__name result-card__name--primary"
+                  id="infoPrimeiraPersonaNome"
+                >
+                  Pessoa 1
+                </h3>
+              </div>
+
+              <i class="result-card__decor-icon fa-solid fa-users"></i>
+            </div>
+
+            <div class="result-card__body">
+              <div>
+                <p class="result-card__label">Participação na renda</p>
+                <strong class="result-card__percentage result-card__percentage--primary" id="porcentagemPessoaUm">
+                  0%
+                </strong>
+              </div>
+
+              <div class="result-card__divider"></div>
+
+              <div>
+                <p class="result-card__label">Valor a pagar</p>
+
+                <div class="payment-value payment-value--primary">
+                  <span class="payment-value__currency">R$</span>
+                  <strong class="payment-value__amount" id="pagarPessoaUm">
+                    0
+                  </strong>
+                </div>
+              </div>
+            </div>
+
+            <i class="result-card__watermark fa-solid fa-wallet"></i>
+          </article>
+
+          <!-- Resultado pessoa 2 -->
+          <article class="result-card result-card--secondary">
+            <div class="result-card__top">
+              <div class="result-card__person">
+                <div class="result-card__icon result-card__icon--secondary">
+                  <i class="fa-solid fa-user"></i>
+                </div>
+
+                <h3
+                  class="result-card__name result-card__name--secondary"
+                  id="infoSegundoPersonaNome"
+                >
+                  Pessoa 2
+                </h3>
+              </div>
+
+              <i class="result-card__decor-icon fa-solid fa-users"></i>
+            </div>
+
+            <div class="result-card__body">
+              <div>
+                <p class="result-card__label">Participação na renda</p>
+                <strong class="result-card__percentage result-card__percentage--secondary" id="porcentagemPessoaDois">
+                  0%
+                </strong>
+              </div>
+
+              <div class="result-card__divider"></div>
+
+              <div>
+                <p class="result-card__label">Valor a pagar</p>
+
+                <div class="payment-value payment-value--secondary">
+                  <span class="payment-value__currency">R$</span>
+                  <strong class="payment-value__amount" id="pagarPessoaDois">
+                    0
+                  </strong>
+                </div>
+              </div>
+            </div>
+
+            <i class="result-card__watermark fa-solid fa-wallet"></i>
+          </article>
+
+        </div>
+
+        <article class="summary-card">
+          <div class="summary-card__chart">
+            <i class="fa-solid fa-chart-pie"></i>
+          </div>
+
+          <div class="summary-card__item">
+            <span class="summary-card__label">Total da participação</span>
+            <strong class="summary-card__value">100,00%</strong>
+          </div>
+
+          <div class="summary-card__divider"></div>
+
+          <div class="summary-card__item">
+            <span class="summary-card__label">Total a pagar</span>
+            <strong class="summary-card__value">R$ 1.000,00</strong>
+          </div>
+        </article>
+
+      </section>
+
+    </section>
+
+  </main>
+
+  <script type="module" src="./src/js/dom.js"></script>
+  <script type="module" src="./src/js/main.js"></script>
+</body>
+</html>
