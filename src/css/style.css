@@ -238,10 +238,10 @@ body {
   top: 1rem;
   right: 1rem;
 
-  width: 42px;
-  height: 42px;
+  width: 32px;
+  height: 32px;
 
-  border-radius: 0.75rem;
+  /* border-radius: 0.75rem; */
   overflow: hidden;
 
   border: 1px solid #dbe4f0;
