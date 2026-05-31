@@ -520,9 +520,17 @@ body {
 
 .summary-card__values {
   display: grid;
-  grid-template-columns: auto 1fr auto 1fr;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
+}
+
+.summary-card__value:first-child {
+  justify-self: end;
+}
+
+.summary-card__value:last-child {
+  justify-self: start;
 }
 
 .summary-card__value {

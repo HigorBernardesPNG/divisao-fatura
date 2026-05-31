@@ -13,12 +13,16 @@ export const elementos = {
     valorFatura: document.getElementById("valorFatura"),
 
     pagarPessoaUm: document.getElementById("pagarPessoaUm"),
-    porcentagemPessoaUm :document.getElementById("porcentagemPessoaUm"),
+    porcentagemPessoaUm:document.getElementById("porcentagemPessoaUm"),
+    percentualPessoaUm: document.getElementById("percentualPessoaUm"),
+
     pagarPessoaDois: document.getElementById("pagarPessoaDois"),
     porcentagemPessoaDois: document.getElementById("porcentagemPessoaDois"),
+    percentualPessoaDois: document.getElementById("percentualPessoaDois"),
+
+    totalFaturaPagar: document.getElementById("totalFaturaPagar"),
+    summaryCardChart: document.querySelector(".summary-card__chart"),
 
     botaoCalcular: document.getElementById("botaoCalcular"),
     botaoLimpar: document.getElementById("botaoLimpar"),
-
-    summaryCardChart: document.querySelector(".summary-card__chart"),
 }
