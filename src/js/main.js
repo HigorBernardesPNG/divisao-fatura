@@ -1,5 +1,7 @@
 import { elementos } from "./dom.js";
-import { calculaParticipacao } from "./calculator.js"
+import { calculaParticipacao } from "./calculator.js";
+import { mostrarFeedback } from "./formFeedback.js";
+import { esconderFeedback } from "./formFeedback.js";
 
 function aplicaValores(){
 
@@ -9,10 +11,13 @@ function aplicaValores(){
 
     const mostrarParticipacao = calculaParticipacao(salarioDois, salarioUm, valorFatura);
     
-    if(!calculaParticipacao(salarioDois, salarioUm, valorFatura)){
-        limpaValores();
+    if(!calculaParticipacao(salarioDois, salarioUm)){
+        mostrarFeedback(salarioUm, salarioDois);
+        // limpaValores();
     }
     else{
+
+        mostrarFeedback(salarioUm, salarioDois);
 
         innerPrimeiraPersonaNome.innerHTML = elementos.primeiraPersonaNome.value;
         innerSegundaPersonaNome.innerHTML = elementos.segundaPersonaNome.value;
@@ -39,17 +44,18 @@ function aplicaValores(){
 
 function limpaValores(){
 
+    esconderFeedback();
+
     pagarPessoaUm.innerHTML = "0";
     porcentagemPessoaUm.innerHTML = `0%`;
     pagarPessoaDois.innerHTML = "0";
     porcentagemPessoaDois.innerHTML = `0%`;
 
-    elementos.summaryCardChart.style.setProperty("--progresso", `0%`);
+    elementos.summaryCardChart.style.setProperty("--progresso", `100%`);
     percentualPessoaUm.innerHTML = `0%`;
     percentualPessoaDois.innerHTML = `0%`;
     totalFaturaPagar.innerHTML = `R$ 0`;
 
-    // elementos.summaryCardChart.style.background = "var(--color-primary)";
     elementos.percentualPessoaUm.style.color = "black";
     elementos.percentualPessoaDois.style.color = "black";
     elementos.totalFaturaPagar.style.color = "black";

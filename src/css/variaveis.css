@@ -4,6 +4,14 @@
   --color-border: #d8dfec;
   --color-text: #10213f;
   --color-muted: #667085;
+  
+  --color-feedback-error-bg: #fee2e2;
+  --color-feedback-error-text: #991b1b;
+  --color-feedback-error-border: #fecaca;
+
+  --color-feedback-success-bg: #dcfce7;
+  --color-feedback-success-text: #166534;
+  --color-feedback-success-border: #bbf7d0;
 
   --color-primary: #2563eb;
   --color-primary-soft: #eff5ff;

@@ -5,7 +5,6 @@ import { elementos } from "./dom.js";
 export function calculaParticipacao(salarioDois, salarioUm, valorFatura){
 
     if(!validarSalarios(salarioUm, salarioDois)){
-        alert("Valores invalidos");
         return false;
     }
 

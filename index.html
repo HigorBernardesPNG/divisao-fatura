@@ -26,7 +26,7 @@
       </div>
 
       <div>
-        <h1 class="app-header__title">Divisão de Fatura</h1>
+        <h1 class="app-header__title">Divisão de Fatura</h1>  
         <p class="app-header__subtitle">
           Divida sua fatura proporcionalmente à renda de cada pessoa.
         </p>
@@ -63,9 +63,15 @@
               Pessoa 1
             </h3>
 
-            <!-- <button class="person-card__menu" type="button" aria-label="Opções">
-              <i class="fa-solid fa-ellipsis-vertical"></i>
-            </button> -->
+            <div class="color-control">
+              <input
+                type="color"
+                id="colorPessoaUm"
+                class="color-control__input"
+                value="#2563eb"
+                aria-label="Alterar cor da pessoa 1"
+              >
+            </div>
           </div>
 
           <div class="person-card__fields">
@@ -159,6 +165,12 @@
             >
           </div>
         </article>
+
+        <div class="form-feedback" id="formFeedback">
+          <p class="form-feedback__message" id="formFeedbackMessage">
+            Preencha os dados corretamente.
+          </p>
+        </div>
 
         <div class="form-actions">
           <button class="button button--primary" id="botaoCalcular" type="button">
@@ -308,7 +320,6 @@
 
   </main>
 
-  <script type="module" src="./src/js/dom.js"></script>
   <script type="module" src="./src/js/main.js"></script>
 </body>
 </html>

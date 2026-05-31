@@ -23,6 +23,9 @@ export const elementos = {
     totalFaturaPagar: document.getElementById("totalFaturaPagar"),
     summaryCardChart: document.querySelector(".summary-card__chart"),
 
+    formFeedback: document.getElementById("formFeedback"),
+    formFeedbackMessage: document.getElementById("formFeedbackMessage"),
+
     botaoCalcular: document.getElementById("botaoCalcular"),
     botaoLimpar: document.getElementById("botaoLimpar"),
 }
