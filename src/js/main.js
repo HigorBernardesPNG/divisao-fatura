@@ -19,9 +19,11 @@ function aplicaValores(){
     }
     else{
         pagarPessoaUm.innerHTML = mostrarParticipacao.valorPessoaUm.toFixed(2);
-        porcentagemPessoaUm.innerHTML = `${mostrarParticipacao.percentualPessoaUm.toFixed(2)}%`;
+        porcentagemPessoaUm.innerHTML = `${mostrarParticipacao.percentualPessoaUm.toFixed(0)}%`;
         pagarPessoaDois.innerHTML = mostrarParticipacao.valorPessoaDois.toFixed(2);
-        porcentagemPessoaDois.innerHTML = `${mostrarParticipacao.percentualPessoaDois.toFixed(2)}%`;
+        porcentagemPessoaDois.innerHTML = `${mostrarParticipacao.percentualPessoaDois.toFixed(0)}%`;
+
+        elementos.summaryCardChart.style.setProperty("--progresso", `${mostrarParticipacao.percentualPessoaUm.toFixed(0)}%`);
     }
 
 }

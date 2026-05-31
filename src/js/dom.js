@@ -18,5 +18,7 @@ export const elementos = {
     porcentagemPessoaDois: document.getElementById("porcentagemPessoaDois"),
 
     botaoCalcular: document.getElementById("botaoCalcular"),
-    botaoLimpar: document.getElementById("botaoLimpar")
+    botaoLimpar: document.getElementById("botaoLimpar"),
+
+    summaryCardChart: document.querySelector(".summary-card__chart"),
 }
