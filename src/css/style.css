@@ -501,8 +501,8 @@ body {
   font-size: 1.4rem;
 
   background: conic-gradient(
-    var(--color-primary) 0 40%,
-    var(--color-secondary) 40% 100%
+    var(--color-primary) 0 var(--progresso),
+    var(--color-secondary) var(--progresso) 100%
   );
 }
 
@@ -516,6 +516,13 @@ body {
   font-size: 0.78rem;
   font-weight: 700;
   color: var(--color-muted);
+}
+
+.summary-card__values {
+  display: grid;
+  grid-template-columns: auto 1fr auto 1fr;
+  align-items: center;
+  gap: 1rem;
 }
 
 .summary-card__value {
